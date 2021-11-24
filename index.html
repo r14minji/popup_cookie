@@ -7,9 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>쿠키팝업</title>
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/anime.js"></script>
   <script defer src="js/cookie_pop.js"></script>
   <script src="https://kit.fontawesome.com/91c15511c8.js" crossorigin="anonymous"></script>
+  <script>
+    window.addEventListener("load", ()=>{
+          new CookiePop({
+            name : "today=done", 
+            popup : "#popup", 
+            btnDel : ".del", 
+            btnView : ".view"
+          }); 
+      })
+</script>
 </head>
 
 <body>

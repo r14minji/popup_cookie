@@ -1,49 +1,47 @@
-const btnDel = document.querySelector(".del");
-const btnView = document.querySelector(".view");
-const popup = document.querySelector("#popup");
-const btnClose = popup.querySelector(".close");
-const isCookie = document.cookie.indexOf("today=done"); // 찾으면 0, 못찾으면 -1
-let isOn;
-console.log(isCookie);
+class CookiePop {
+
+  constructor(opt) {
+    this.cookieName = opt.name;
+    this.popup = document.querySelector(opt.popup);
+    this.btnClose = this.popup.querySelector(".close");
+    this.btnDel = document.querySelector(opt.btnDel);
+    this.btnView = document.querySelector(opt.btnView);
+    this.isCookie = document.cookie.indexOf(this.cookieName);
+    this.isOn;
 
 
-/*
-if(isCookie == -1){
-  isOn = "block";
-}else{
-  isOn = "none";
-}
-popup.style.display = isOn;
-*/
-
-(isCookie == -1) ? isOn = "block" : isOn = "none";
-popup.style.display = isOn;
+    (this.isCookie == -1) ? this.isOn = "block" : this.isOn = "none";
+    this.popup.style.display = this.isOn;
 
 
+    //쿠키 확인 버튼 이벤트 
+    this.btnView.addEventListener("click", e => {
+      e.preventDefault();
+      console.log(document.cookie);
+    });
 
-btnView.addEventListener("click", e=>{
-  e.preventDefault();
-  console.log(document.cookie)
-})
-
-btnDel.addEventListener("click", e => {
-  e.preventDefault();
-  setCookie("today", "done", 0);
-})
+    //쿠키삭제 버튼 이벤트 
+    this.btnDel.addEventListener("click", e => {
+      e.preventDefault();
+      this.setCookie(this.cookieName, 0);
+    })
 
 
-btnClose.addEventListener("click", e => {
-  popup.style.display = "none";
+    //팝업 닫기 버튼 이벤트 
+    this.btnClose.addEventListener("click", e => {
+      this.popup.style.display = "none";
 
-  let isChecked = popup.querySelector("input[type=checkbox]").checked;
-  if(isChecked) setCookie("today", "done", 1);
-})
+      let isChecked = this.popup.querySelector("input[type=checkbox]").checked;
+      if (isChecked) this.setCookie(this.cookieName, 1);
+    });
+  }
 
-function setCookie(name, val, due){
-  const today = new Date();
-  const date = today.getDate();
-  today.setDate(date +due);
-  const duedate = today.toGMTString();
-  document.cookie = `${name}=${val}; path=/; expires=${duedate}`;
+  setCookie(name, due) {
+    const today = new Date();
+    const date = today.getDate();
+    today.setDate(date + due);
+    const duedate = today.toGMTString();
+    document.cookie = `${name}; path=/; expires = ${duedate}`;
+  }
 }
 
