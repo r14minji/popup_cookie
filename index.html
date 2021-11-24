@@ -9,33 +9,25 @@
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/cookie_pop.js"></script>
   <script src="https://kit.fontawesome.com/91c15511c8.js" crossorigin="anonymous"></script>
-  <script>
-    window.addEventListener("load", ()=>{
-          new CookiePop({
-            name : "today=done", 
-            popup : "#popup", 
-            btnDel : ".del", 
-            btnView : ".view"
-          }); 
-      })
-</script>
 </head>
-
 <body>
 
-  <a href="#" class="del">DELETE COOKIE</a>
-  <a href="#" class="view">VIEW COOKIE</a>
+  <a href="#" class="btnDel">쿠키 삭제하기</a>
+  <a href="#" class="btnView">쿠키 확인하기</a>
 
   <aside id="popup">
     <div class="content">
-      Hello!
+      홈페이지 방문을 환영합니다. 
     </div>
     <div class="wrap">
-      <input type="checkbox"  id="ck">
-      <label for="ck">오늘 하루 그만보기</label>
+      <input type="checkbox" id="ck">
+      <label for="ck">오늘 하루 보지 않기</label>
     </div>
-
-    <a href="#" class="close">CLOSE</a>
+    <a href="#" class="popDel">DELETE</a>
   </aside>
+
+
+
+
 </body>
 </html>

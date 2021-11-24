@@ -1,48 +1,51 @@
 @charset 'utf-8';
 @import 'reset.scss';
 
-.del{
+.btnDel{
   display: inline-block;
-  padding: 10px 40px;
-  margin: 50px; 
-  font: bold 14px/1 "arial"; color: #fff;
-  background: linear-gradient(45deg, pink, violet);
-  border-radius: 5px;
+  padding: 10px 20px; 
+  margin: 20px;
+  background: #02343F;
+  color: #F0EDCC;
+  font: 20px/1 '맑은 고딕';
+  border-radius: 20px;
 }
 
-.view{
+.btnView{
   display: inline-block;
-  padding: 10px 40px;
-  margin: 50px; 
-  font: bold 14px/1 "arial"; color: #fff;
-  background: linear-gradient(45deg, lightcyan, aqua);
-  border-radius: 5px;
+  padding: 10px 20px; 
+  margin-right: 20px;
+  background: #02343F;
+  color: #F0EDCC;
+  font: 20px/1 '맑은 고딕';
+  border-radius: 20px;
 }
 
 #popup{
   width: 500px; padding: 40px;
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(45deg, lightgreen, rgb(204, 235, 31));
-  border-radius: 15px;
+  background: #F0EDCC;
+  margin: 0 auto;
+  position: relative;
 
   .content{
-    width: 100%; min-height: 150px;
-    color: #fff; font-size: 30px;
-  }
-  .wrap{
-    display: inline-flex; align-items: center;
 
-    input{
+    width: 100%; min-height: 300px;
+    color: #02343F;
+    font-size: 30px;
+    }
+    .wrap{
+      display: inline-flex; align-items: center;
+
+      input{
       margin-right: 10px;
-
+      }
+      label{
+      color: #02343F;
+      }
     }
-    label{
-      color: #fff;
+    .popDel{
+      position: absolute;
+      bottom: 30px; right: 30px;
+      color: #02343F;
     }
-  }
-
-  .close{
-    position: absolute; bottom: 40px;right: 40px; color: #fff;
-  }
 }
