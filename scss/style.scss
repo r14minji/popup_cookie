@@ -1,25 +1,48 @@
 @charset 'utf-8';
 @import 'reset.scss';
 
+.del{
+  display: inline-block;
+  padding: 10px 40px;
+  margin: 50px; 
+  font: bold 14px/1 "arial"; color: #fff;
+  background: linear-gradient(45deg, pink, violet);
+  border-radius: 5px;
+}
+
+.view{
+  display: inline-block;
+  padding: 10px 40px;
+  margin: 50px; 
+  font: bold 14px/1 "arial"; color: #fff;
+  background: linear-gradient(45deg, lightcyan, aqua);
+  border-radius: 5px;
+}
+
 #popup{
-  width: 500px;
-  background: lightblue;
-  padding: 40px;
-  box-sizing: border-box;
-  color: #fff;
-  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 500px; padding: 40px;
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, lightgreen, rgb(204, 235, 31));
+  border-radius: 15px;
 
   .content{
-    width: 100px; min-height: 150px;
+    width: 100%; min-height: 150px;
+    color: #fff; font-size: 30px;
   }
-
-  &::after{ content:''; display: block; clear: both;}
   .wrap{
-    float: left; 
+    display: inline-flex; align-items: center;
 
-    label{ font: bold 12px/1 "맑은 고딕"; color: #fff; margin-left: 4px;}
+    input{
+      margin-right: 10px;
+
+    }
+    label{
+      color: #fff;
+    }
   }
+
   .close{
-    float: right; font: 14px/1 'arial'; color: #fff;
+    position: absolute; bottom: 40px; color: #fff;
   }
 }

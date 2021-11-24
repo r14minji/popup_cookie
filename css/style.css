@@ -1,7 +1,7 @@
-@charset "UTF-8";
 * {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+  box-sizing: border-box; }
 
 ul, ol, li {
   list-style: none; }
@@ -9,32 +9,48 @@ ul, ol, li {
 a {
   text-decoration: none; }
 
+.del {
+  display: inline-block;
+  padding: 10px 40px;
+  margin: 50px;
+  font: bold 14px/1 "arial";
+  color: #fff;
+  background: linear-gradient(45deg, pink, violet);
+  border-radius: 5px; }
+
+.view {
+  display: inline-block;
+  padding: 10px 40px;
+  margin: 50px;
+  font: bold 14px/1 "arial";
+  color: #fff;
+  background: linear-gradient(45deg, lightcyan, aqua);
+  border-radius: 5px; }
+
 #popup {
   width: 500px;
-  background: lightblue;
   padding: 40px;
-  box-sizing: border-box;
-  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, lightgreen, #cceb1f);
+  border-radius: 15px; }
   #popup .content {
-    width: 100px;
-    min-height: 150px; }
-  #popup::after {
-    content: '';
-    display: block;
-    clear: both; }
+    width: 100%;
+    min-height: 150px;
+    color: #fff;
+    font-size: 30px; }
   #popup .wrap {
-    float: left; }
+    display: inline-flex;
+    align-items: center; }
+    #popup .wrap input {
+      margin-right: 10px; }
     #popup .wrap label {
-      font: bold 12px/1 "맑은 고딕";
-      color: #fff;
-      margin-left: 4px; }
+      color: #fff; }
   #popup .close {
-    float: right;
-    font: 14px/1 'arial';
+    position: absolute;
+    bottom: 40px;
     color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
