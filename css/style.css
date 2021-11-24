@@ -51,6 +51,7 @@ a {
   #popup .close {
     position: absolute;
     bottom: 40px;
+    right: 40px;
     color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
