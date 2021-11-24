@@ -46,10 +46,10 @@ a {
       margin-right: 10px; }
     #popup .wrap label {
       color: #02343F; }
-  #popup .popDel {
+  #popup .close {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 40px;
+    right: 40px;
     color: #02343F; }
 
 /*# sourceMappingURL=style.css.map */
